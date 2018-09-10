@@ -1,7 +1,7 @@
 <!-- anchored iOS-style navBar -->
 <nav class="navBar">
 
-  <li class="navBar__entry">
+  <li class="navBar__entry <%= current_class?(root_path) %>">
     <%=link_to root_path do %>
       <span class="icon">
         <%= fa_icon "calendar" %>
@@ -10,7 +10,7 @@
     <% end %>
   </li>
 
-  <li class="navBar__entry">
+  <li class="navBar__entry <%= current_class?(archive_path) %>">
     <%=link_to archive_path do %>
       <span class="icon">
         <%= fa_icon "archive" %>
@@ -19,7 +19,7 @@
     <% end %>
   </li>
 
-  <li class="navBar__entry">
+  <li class="navBar__entry <%= current_class?(new_entry_path) %>">
     <%=link_to new_entry_path do %>
       <span class="icon">
         <%= fa_icon "plus-square" %>
@@ -28,7 +28,7 @@
     <% end %>
   </li>
 
-  <li class="navBar__entry">
+  <li class="navBar__entry <%= current_class?('/users/edit') %>">
     <%=link_to edit_user_registration_path do %>
       <span class="icon">
         <%= fa_icon "cog" %>

@@ -26,8 +26,8 @@ $color-purple: #6457A6;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 84px;
-  color: #1895e1;
+  height: 74px;
+  color: #777777;
   border-top: 1px solid #efefef;
   background: transparentize(white, 0.2%);
   backdrop-filter: blur(10px);
@@ -35,7 +35,7 @@ $color-purple: #6457A6;
   z-index: 999;
 
   a {
-    color: #1895e1;
+    color: #777777;
     text-decoration: none;
     position: relative;
   }
@@ -43,9 +43,12 @@ $color-purple: #6457A6;
   li {
     list-style: none;
     text-align: center;
-    font-size: 11px;
-    font-weight: 100;
+    font-size: 10px;
     padding: 0.6rem 0 0;
+
+    a {
+      font-weight: 100 !important;
+    }
 
     .icon {
       display: block;
@@ -58,6 +61,11 @@ $color-purple: #6457A6;
     flex: 0 1 auto;
     width: 25%;
     text-align: center; 
+  }
+  &__entry.active {
+    * {
+      color: #1895e1;
+    }
   }
 }
 
