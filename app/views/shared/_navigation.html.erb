@@ -1,0 +1,32 @@
+<!-- anchored iOS-style navBar -->
+<nav class="navBar">
+
+  <li class="navBar__entry">
+    <span class="icon">
+      <%= fa_icon "calendar" %>
+    </span>
+    <h3><%=link_to "Today", root_path %></h3>
+  </li>
+
+  <li class="navBar__entry">
+    <span class="icon">
+      <%= fa_icon "archive" %>
+    </span>
+    <h3><%=link_to "All Entries", archive_path %></h3>
+  </li>
+
+  <li class="navBar__entry">
+    <span class="icon">
+      <%= fa_icon "plus-square" %>
+    </span>
+    <h3><%=link_to "Add New", new_entry_path %></h3>
+  </li>
+
+  <li class="navBar__entry">
+    <span class="icon">
+      <%= fa_icon "cog" %>
+    </span>
+    <h3><%=link_to "Settings", edit_user_registration_path %></h3>
+  </li>
+
+</nav>

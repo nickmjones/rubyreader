@@ -1,0 +1,45 @@
+<header class="main">
+  <h1>Edit <%= resource_name.to_s.humanize %></h1>
+  <h3>Change your profile</h3>
+</header>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.text_field :fname, autofocus: true %>
+    <%= f.label :fname, 'First Name' %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :lname %>
+    <%= f.label :lname, 'Last Name' %>
+  </div>
+
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :email %>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.label :password %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.label :password_confirmation %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :current_password, autocomplete: "current-password" %>
+    <%= f.label :current_password %>
+  </div>
+    
+  <%= f.submit "Update", class: "btn" %>
+<% end %>
+

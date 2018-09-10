@@ -1,0 +1,14 @@
+<header class="main">
+  <h1>All Entries</h1>
+  <h3><%= pluralize(@entries.count, 'Entry') %></h3>
+</header>
+
+<div class="addBottomSpace">
+  <% if @entries.empty? %>
+    No entries for today.
+  <% else %>
+    <div class="entries">
+      <%= render :partial => 'entry', :collection => @entries %>
+    </div>
+  <% end %>
+</div>

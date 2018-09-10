@@ -1,0 +1,67 @@
+.book {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__title {
+    flex: 0 1 auto;
+    width: 110%;
+    margin: 0 -1rem;
+    padding: 15vh 1rem;
+    background: linear-gradient(35deg, #a545ce, #9ba6f4);
+    
+    h1 {
+      color: white;
+      font-weight: 400;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    h4 {
+      color: transparentize(white, 0.6);
+    }
+  }
+
+  &__desc {
+    padding: 2vh 1rem;
+    flex: 0 1 auto;
+    width: 110%;
+    margin: 0 -1rem;
+    text-align: center;
+    h4 {
+      flex: 0 1 auto;
+      display: block;
+      width: 100%;
+      font-weight: 200;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    flex: 0 1 auto;
+    width: 100%;
+
+    &__item {
+      flex: 2;
+      text-align: center;
+      padding: 2rem 0 0;
+
+      &--count {
+        border: 2px solid #4ed866;
+        line-height: 3.7rem;
+        width: 4rem;
+        height: 4rem;
+        margin: 0 auto 1rem;
+        text-align: center;
+        display: block;
+        border-radius: 100px;
+        font-size: 2rem;
+        color: white;
+      }
+
+      h3 {
+        font-weight: 200;
+        font-size: 80%;
+        color: #efefef;
+      }
+    }
+  }
+}

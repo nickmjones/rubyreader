@@ -1,0 +1,43 @@
+<header class="sub">
+  <div class="chevron">
+    <%= link_to :back do %>
+      <%=fa_icon "chevron-left" %>
+    <% end %>
+  </div>
+  <h4 class="is-centered"><%= @entry.created_at.strftime("%b %d, %Y") %></h4>
+</header>
+
+<div class="book addBottomSpace">
+  
+  <div class="book__title">
+    <h1 class="book-title is-centered" data-title="<%= @entry.book_title %>">
+      <%= @entry.book_title %>
+    </h1>
+    <h4 class="author-field is-centered">
+      <%=image_tag('loading.gif') %>
+    </h4>
+
+    <div class="book__stats">
+      <div class="book__stats__item">
+        <div class="book__stats__item--count">
+          <%= @entry.pages_read %>
+        </div>
+        <h3>Pages Read</h3>
+      </div>
+      <div class="book__stats__item">
+        <div class="book__stats__item--count">
+          <%= @entry.minutes_read %>
+        </div>
+        <h3>Minutes Read</h3>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="book__desc">
+    <h4>
+      <%=image_tag('loading-light.gif') %>
+    </h4>
+  </div>
+
+</div>

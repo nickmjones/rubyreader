@@ -1,0 +1,40 @@
+<% if user_signed_in? %>
+  <header class="main">
+    <h1>Today</h1>
+    <h3>
+      <%= pluralize(@entries_today.count, 'Entry') %> &bullet;
+      <%= current_user.reading_goal_minutes.to_i %> Minute Goal
+    </h3>
+  </header>
+
+  <div class="addBottomSpace">
+    <% if @entries_today.empty? %>
+      No entries for today.
+    <% else %>
+      <div class="entries">
+        <%= render :partial => 'entry', :collection => @entries_today %>
+      </div>
+    <% end %>
+
+    <h5 class="glance is-centered">
+      <%= @today_minutes %> of <%= current_user.reading_goal_minutes.to_i %> Minutes
+      (<%= goal_seek(@today_minutes, current_user.reading_goal_minutes) %>%)
+    </h5>
+  </div>
+<% else %>
+  <header class="main">
+    <h1>Today</h1>
+    <h3>
+      Today's reading goal progress
+    </h3>
+  </header>
+
+  <div class="gentleNudge">
+    <div class="gentleNudge__text">
+      <main>👋</main>
+      <h1>Hello friend!</h1>
+      <h2>Today's reading will be here after you <%=link_to "sign up", new_user_registration_path %> or <%=link_to "log in", new_user_session_path %>.</h2>
+    </div>
+  </div>
+
+<% end %>

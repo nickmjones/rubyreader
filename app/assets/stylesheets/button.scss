@@ -1,0 +1,26 @@
+.btn,
+a.btn,
+input[type="submit"].btn {
+  background: linear-gradient(45deg, #dd2be2, #f72f6f);
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  height: 3.25rem;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  margin: 1rem 0 0;
+  display: inline-block;
+  width: 100%;
+  line-height: 2.75rem;
+  font-weight: 400;
+  border: 2px solid transparent;
+
+  &--devise {
+    background: white;
+    border: 2px solid #777;
+    color: #777;
+  }
+}
