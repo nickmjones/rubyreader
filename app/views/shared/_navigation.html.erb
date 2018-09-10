@@ -2,31 +2,39 @@
 <nav class="navBar">
 
   <li class="navBar__entry">
-    <span class="icon">
-      <%= fa_icon "calendar" %>
-    </span>
-    <h3><%=link_to "Today", root_path %></h3>
+    <%=link_to root_path do %>
+      <span class="icon">
+        <%= fa_icon "calendar" %>
+      </span>
+      <h3>Today</h3>
+    <% end %>
   </li>
 
   <li class="navBar__entry">
-    <span class="icon">
-      <%= fa_icon "archive" %>
-    </span>
-    <h3><%=link_to "All Entries", archive_path %></h3>
+    <%=link_to archive_path do %>
+      <span class="icon">
+        <%= fa_icon "archive" %>
+      </span>
+      <h3>All Entries</h3>
+    <% end %>
   </li>
 
   <li class="navBar__entry">
-    <span class="icon">
-      <%= fa_icon "plus-square" %>
-    </span>
-    <h3><%=link_to "Add New", new_entry_path %></h3>
+    <%=link_to new_entry_path do %>
+      <span class="icon">
+        <%= fa_icon "plus-square" %>
+      </span>
+      <h3>Add New</h3>
+    <% end %>
   </li>
 
   <li class="navBar__entry">
-    <span class="icon">
-      <%= fa_icon "cog" %>
-    </span>
-    <h3><%=link_to "Settings", edit_user_registration_path %></h3>
+    <%=link_to edit_user_registration_path do %>
+      <span class="icon">
+        <%= fa_icon "cog" %>
+      </span>
+      <h3>Profile</h3>
+    <% end %>
   </li>
 
 </nav>

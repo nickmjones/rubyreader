@@ -14,7 +14,13 @@ form {
     border-bottom: 1px solid #178aec;
     padding: 0.5rem 0;
     font-size: 1.5rem;
-    margin-bottom: 0.25rem;
+    margin: 0.25rem 0;
+    transition: all 0.20s ease-in-out;
+    &:active,
+    &:focus {
+      outline: 0;
+      background: lighten(#178aec, 45%);
+    }
   }
 
   select {

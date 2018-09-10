@@ -7,32 +7,35 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :fname %><br />
     <%= f.text_field :fname, autofocus: true %>
+    <%= f.label :fname, "First Name" %>
   </div>
 
   <div class="field">
-    <%= f.label :lname %><br />
     <%= f.text_field :lname %>
+    <%= f.label :lname, "Last Name" %>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
     <%= f.email_field :email, autocomplete: "email" %>
+    <%= f.label :email %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.label :password %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.label :password_confirmation %>
   </div>
+
+  <div class="field">
+    <%= f.text_field :reading_goal_minutes %>
+    <%= f.label :reading_goal_minutes, "How many minutes a day?" %>
+  </div>
+
 
   <div class="actions">
     <%= f.submit "Sign up", class: "btn" %>
