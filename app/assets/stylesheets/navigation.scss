@@ -70,19 +70,34 @@ $color-purple: #6457A6;
 }
 
 .sub {
-  background: #1895e1;
-  margin: 0 -1rem;
+  margin: 0;
   padding: 1rem;
   color: white;
   font-weight: 200;
   font-size: 90%;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backdrop-filter: blur(10px);
 
   .chevron {
     position: absolute;
     color: white;
     a {
       color: white;
+    }
+  }
+  .edit {
+    position: absolute;
+    color: white;
+    top: 1rem;
+    right: 1rem;
+    font-weight: 100;
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: 100;
     }
   }
 }
