@@ -14,9 +14,9 @@
   grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
 
   &__item {
-    background: linear-gradient(45deg, $color-purple, $color-hotpink);
+    background: linear-gradient(45deg, $color-blue, $color-teal);
     border-radius: 6px;
-    box-shadow: 0 8px 16px transparentize($color-hotpink, .7);
+    box-shadow: 0 8px 16px transparentize($color-teal, .7);
     padding: 1rem;
     position: relative;
   }
@@ -41,6 +41,7 @@
 
     a {
       color: #fff;
+      font-weight: 400;
       text-decoration: none;
     }
   }

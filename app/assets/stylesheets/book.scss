@@ -10,27 +10,27 @@
     background: linear-gradient(35deg, #a545ce, #9ba6f4);
     
     h1 {
-      color: white;
+      color: #fff;
       font-weight: 400;
       font-size: 3rem;
-      margin-bottom: 1rem;
     }
     h4 {
-      color: transparentize(white, 0.6);
+      line-height: 1;
+      color: transparentize(#fff, 0.6);
     }
   }
 
   &__desc {
-    padding: 2vh 1rem;
     flex: 0 1 auto;
-    width: 110%;
     margin: 0 -1rem;
+    padding: 2vh 1rem;
     text-align: center;
+    width: 110%;
     h4 {
-      flex: 0 1 auto;
       display: block;
-      width: 100%;
+      flex: 0 1 auto;
       font-weight: 200;
+      width: 100%;
     }
   }
 

@@ -28,6 +28,15 @@
     <% end %>
   </li>
 
+  <li class="navBar__entry">
+    <%=link_to new_entry_path do %>
+      <span class="icon">
+        <%= fa_icon "check" %>
+      </span>
+      <h3>This Week</h3>
+    <% end %>
+  </li>
+
   <li class="navBar__entry <%= current_class?('/users/edit') %>">
     <%=link_to edit_user_registration_path do %>
       <span class="icon">

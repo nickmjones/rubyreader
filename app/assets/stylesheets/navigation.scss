@@ -1,8 +1,7 @@
-$navHeight: 8rem;
-$color-purple: #6457A6;
+$nav-height: 8rem;
 
 .main {
-  height: $navHeight;
+  height: $nav-height;
   padding: 0 1rem;
   padding: 2rem 1rem;
   position: -webkit-sticky;
@@ -32,7 +31,7 @@ $color-purple: #6457A6;
   height: 78px;
   color: #777777;
   border-top: 1px solid #efefef;
-  background: transparentize(white, 0.2%);
+  background: #fff;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 999;
@@ -44,19 +43,19 @@ $color-purple: #6457A6;
   }
 
   li {
-    list-style: none;
-    text-align: center;
     font-size: 10px;
-    padding: 0.6rem 0 0;
+    list-style: none;
+    padding: .6rem 0 0;
+    text-align: center;
 
-    a {
-      font-weight: 100 !important;
+    h3 {
+      font-weight: 100;
     }
 
     .icon {
       display: block;
       font-size: 24px;
-      padding-bottom: 0.3rem;
+      padding-bottom: .4rem;
     }
   }
 
@@ -84,9 +83,16 @@ $color-purple: #6457A6;
   width: 100%;
   -webkit-backdrop-filter: blur(10px);
 
+  &--blue {
+    background: $color-blue;
+  }
+
   .chevron {
     position: absolute;
-    color: white;
+    color: #fff;
+    font-size: 1.5rem;
+    left: .75rem;
+    top: .75rem;
     a {
       color: white;
     }
