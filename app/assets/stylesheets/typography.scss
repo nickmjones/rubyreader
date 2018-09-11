@@ -5,6 +5,9 @@ body {
   font-size: 18px;
   padding: 0;
   margin: 0;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 
   * {
     box-sizing: border-box;
@@ -14,6 +17,9 @@ body {
 
 .is-centered {
   text-align: center;
+}
+.is-padded {
+  margin: 2rem 0;
 }
 
 a {

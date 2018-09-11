@@ -7,9 +7,16 @@
     </h3>
   </header>
 
-  <div class="addBottomSpace">
+  <div class="add-bottom-space">
     <% if @entries_today.empty? %>
-      No entries for today.
+      <div class="gentle-nudge">
+        <div class="gentle-nudge__text">
+          <h5 class="is-centered is-padded">
+            🤔 No reading progress for today.
+            <%=link_to "Add Now", new_entry_path, class: 'btn btn--simple' %>
+          </h5>
+        </div>
+      </div>
     <% else %>
       <div class="entries">
         <%= render :partial => 'entry', :collection => @entries_today %>
@@ -29,8 +36,8 @@
     </h3>
   </header>
 
-  <div class="gentleNudge">
-    <div class="gentleNudge__text">
+  <div class="gentle-nudge">
+    <div class="gentle-nudge__text">
       <main>👋</main>
       <h1>Hello friend!</h1>
       <h2>Today's reading will be here after you <%=link_to "sign up", new_user_registration_path %> or <%=link_to "log in", new_user_session_path %>.</h2>

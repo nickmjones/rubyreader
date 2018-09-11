@@ -1,1 +1,13 @@
+<header class="sub">
+  <div class="chevron">
+    <%= link_to :back do %>
+      <%=fa_icon "chevron-left" %>
+    <% end %>
+  </div>
+  <h4 class="is-centered"><%= @entry.created_at.strftime("%b %d, %Y") %></h4>
+  <div class="edit">
+    <%=link_to "Edit", edit_entry_path %>
+  </div>
+</header>
+
 <%= render 'form' %>

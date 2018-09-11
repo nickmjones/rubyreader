@@ -1,4 +1,9 @@
 <div class="entries__item">
+  <div class="edit-this">
+    <%=link_to edit_entry_path(entry) do %>
+      <%=fa_icon "wrench" %>
+    <% end %>
+  </div>
   <h1><%= link_to entry.book_title, entry %></h1>
   <div class="stats">
     <div class="stats__item">

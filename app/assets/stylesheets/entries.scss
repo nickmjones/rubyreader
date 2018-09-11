@@ -1,97 +1,103 @@
-@keyframes fadeDown {
-  0% {
-    margin-top: -1rem;
-    opacity: 0;
-  }
-
-  100% {
-    margin-top: 0;
-    opacity: 1;
-  }
-}
-
-@mixin fadeIn($duration) {
-  animation: fadeDown $duration;
-}
-
 .content {
   padding: 0 1rem;
 }
 
 .glance {
-  padding: 1rem 0 0;
   font-weight: 200;
+  padding: 1rem 0 0;
 }
 
 .entries {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-  grid-row-gap: 1rem;
   grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
 
   &__item {
-    background: white;
-    padding: 1rem;
+    background: linear-gradient(45deg, $color-purple, $color-hotpink);
     border-radius: 6px;
-    background: linear-gradient(45deg, #552edd, #df3952);
-    box-shadow: 0 8px 16px transparentize(#df3952, 0.7);
+    box-shadow: 0 8px 16px transparentize($color-hotpink, .7);
+    padding: 1rem;
+    position: relative;
+  }
 
-    h1 {
-      color: white;
-      font-size: 2rem;
-      font-weight: 400;
-      a {
-        color: white;
-        text-decoration: none;
-      }
+  &__item .edit-this {
+    color: #fff;
+    font-weight: 200;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+
+    a {
+      color: #fff;
     }
+  }
 
-    .stats {
-      margin-top: 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-      h2 {
-        color: white;
-        font-weight: 200;
-        font-size: 2.25rem;
-        small {
-          display: block;
-          font-size: 40%;
-          font-weight: 400;
-        }
+  h1 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 200;
+    padding-right: 3rem;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    margin-top: 2rem;
+
+    h2 {
+      color: #fff;
+      font-size: 2.25rem;
+      font-weight: 200;
+
+      small {
+        display: block;
+        font-size: 40%;
+        font-weight: 400;
       }
     }
   }
 }
 
-.addBottomSpace {
+
+.add-bottom-space {
   padding-bottom: 88px;
 }
 
-.gentleNudge {
-  display: flex;
-  height: 60vh;
+.gentle-nudge {
   align-content: center;
-  justify-content: center;
+  display: flex;
   flex-direction: column;
+  height: 60vh;
+  justify-content: center;
+
+
   &__text {
-    text-align: center;
     color: #444;
     padding: 1rem;
+    text-align: center;
+
     main {
       font-size: 4rem;
-      padding: 0;
       line-height: 1;
+      padding: 0;
     }
+
     h1 {
+      color: $color-blue;
       font-weight: 400;
-      color: #1895e1;
       line-height: 1.5;
     }
+
     h2 {
+      color: #777;
       font-size: 100%;
       font-weight: 400;
-      color: #777;
       line-height: 1.25;
     }
   }
