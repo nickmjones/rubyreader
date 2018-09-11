@@ -3,20 +3,21 @@
   flex-wrap: wrap;
 
   &__title {
+    background: linear-gradient(35deg, $color-purple, $color-lblue);
     flex: 0 1 auto;
-    width: 110%;
     margin: 0 -1rem;
     padding: 15vh 1rem;
-    background: linear-gradient(35deg, #a545ce, #9ba6f4);
+    width: 110%;
     
     h1 {
       color: #fff;
       font-weight: 400;
       font-size: 3rem;
     }
+
     h4 {
-      line-height: 1;
       color: transparentize(#fff, 0.6);
+      line-height: 1;
     }
   }
 
@@ -26,6 +27,7 @@
     padding: 2vh 1rem;
     text-align: center;
     width: 110%;
+
     h4 {
       display: block;
       flex: 0 1 auto;

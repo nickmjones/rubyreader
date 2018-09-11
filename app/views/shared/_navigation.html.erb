@@ -28,8 +28,8 @@
     <% end %>
   </li>
 
-  <li class="navBar__entry">
-    <%=link_to new_entry_path do %>
+  <li class="navBar__entry <%= current_class?(thisweek_path) %>">
+    <%=link_to thisweek_path do %>
       <span class="icon">
         <%= fa_icon "check" %>
       </span>

@@ -10,17 +10,11 @@ class EntriesController < ApplicationController
     @entries_today = Entry.today.order('created_at DESC')
   end
 
-  def archive
-    @entries = Entry.all.order('created_at DESC')
-  end
-
   def edit
     @books = Entry.select(:book_title).map(&:book_title)
-    @entry = Entry.find(params[:id])
   end
 
   def show
-    @entry = Entry.find(params[:id])
   end
 
   def new
@@ -52,14 +46,25 @@ class EntriesController < ApplicationController
     redirect_to root_path, notice: "I deleted that status."
   end
 
+  # /archive
+  def archive
+    @entries = Entry.all.order('created_at DESC')
+  end
+
+  # /thisweek
+  def thisweek
+    @week_minutes = Entry.thisweek.select(:minutes_read).map(&:minutes_read).inject(0, :+)
+    @entries = Entry.thisweek.all.order('created_at ASC')
+  end
+
   private
 
-  def set_entry
-    @entry = Entry.find(params[:id])
-  end
+    def set_entry
+      @entry = Entry.find(params[:id])
+    end
 
-  def entry_params
-    params.require(:entry).permit(:book_title, :genre, :pages_read, :genre, :minutes_read, :user_id)
-  end
+    def entry_params
+      params.require(:entry).permit(:book_title, :genre, :pages_read, :genre, :minutes_read, :user_id)
+    end
 
 end

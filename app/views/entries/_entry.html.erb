@@ -1,4 +1,9 @@
 <div class="entries__item">
+  <% if local_assigns[:timestamp] %>
+    <div class="time-stamp">
+      <%= entry.created_at.strftime("%A %l:%M %p") %>
+    </div>
+  <% end %>
   <div class="edit-this">
     <%=link_to edit_entry_path(entry) do %>
       <%=fa_icon "wrench" %>
