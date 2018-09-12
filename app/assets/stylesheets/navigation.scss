@@ -24,11 +24,9 @@ $nav-height: 8rem;
   }
   .add-new-entry {
     position: absolute;
-    top: 3rem;
-    right: 3rem;
-    a {
-      color: red;
-    }
+    top: 2.5rem;
+    right: 1.3rem;
+    color: $color-blue;
   }
 }
 

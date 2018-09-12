@@ -48,11 +48,13 @@ class EntriesController < ApplicationController
 
   # /archive
   def archive
-    @entries = Entry.all.order('created_at DESC')
+    @this_user = current_user.id
+    @entries = Entry.mine.all.order('created_at DESC')
   end
 
   # /thisweek
   def thisweek
+    @this_user = current_user.id
     @week_minutes = Entry.thisweek.select(:minutes_read).map(&:minutes_read).inject(0, :+)
     @entries = Entry.thisweek.all.order('created_at ASC')
   end

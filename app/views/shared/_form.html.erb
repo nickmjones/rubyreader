@@ -20,6 +20,9 @@
     <label><%= f.label :minutes_read %></label>
   </p>
 
-  <%= f.hidden_field :user_id, value: current_user.id %>
+  <% if user_signed_in? %>
+    <!-- we have to check, or the resting screen throws an error -->
+    <%= f.hidden_field :user_id, value: current_user.id %>
+  <% end %>
   <%= f.submit "Add Progress", class: "btn" %>
 <% end %>

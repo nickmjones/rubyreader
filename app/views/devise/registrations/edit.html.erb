@@ -44,6 +44,7 @@
     <%= f.label :current_password %>
   </div>
 </div>
+<%= link_to('Logout', destroy_user_session_path, method: :delete, data: {confirm: "Are you sure?"}) %> 
 <%= f.submit "Update", class: "btn" %>
 <% end %>
 

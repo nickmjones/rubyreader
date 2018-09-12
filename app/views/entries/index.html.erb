@@ -5,7 +5,7 @@
       <%= pluralize(@entries_today.count, 'Entry') %>,
       <%= current_user.reading_goal_minutes.to_i %> Minute Goal
     </h3>
-    <%=link_to 'New', new_entry_path, class: 'add-new-entry new' %>
+    <%=link_to 'New', "#", class: 'add-new-entry new' %>
   </header>
 
   <div class="add-bottom-space">
@@ -13,7 +13,7 @@
       <div class="gentle-nudge">
         <div class="gentle-nudge__text">
           <h5 class="is-centered is-padded">
-            🤔 No reading progress for today.
+            No entries for today. 😕
             <%=link_to "Add Now", new_entry_path, class: 'btn btn--simple new' %>
           </h5>
         </div>
