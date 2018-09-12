@@ -11,6 +11,7 @@ $nav-height: 8rem;
   z-index: 999;
   width: 110%;
   margin: 0 -1rem;
+
   h1 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -20,6 +21,14 @@ $nav-height: 8rem;
     font-size: 90%;
     font-weight: 400;
     line-height: 2;
+  }
+  .add-new-entry {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    a {
+      color: red;
+    }
   }
 }
 

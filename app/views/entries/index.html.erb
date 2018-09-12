@@ -5,6 +5,7 @@
       <%= pluralize(@entries_today.count, 'Entry') %>,
       <%= current_user.reading_goal_minutes.to_i %> Minute Goal
     </h3>
+    <%=link_to 'New', new_entry_path, class: 'add-new-entry new' %>
   </header>
 
   <div class="add-bottom-space">

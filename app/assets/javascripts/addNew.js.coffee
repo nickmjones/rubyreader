@@ -1,4 +1,4 @@
-$ ->
+document.addEventListener 'turbolinks:load', ->
   
   handleForm = ->
     p = $('.view')
@@ -9,6 +9,7 @@ $ ->
     f.toggleClass('is-popped')
   
   $('.new').click (e)->
+    console.log "Click happened"
     e.preventDefault()
     handleForm()
   $('.close').click ->

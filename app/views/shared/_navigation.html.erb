@@ -19,15 +19,6 @@
     <% end %>
   </li>
 
-  <li class="navBar__entry <%= current_class?(new_entry_path) %>">
-    <%=link_to new_entry_path, class: 'new' do %>
-      <span class="icon">
-        <%= fa_icon "plus-square" %>
-      </span>
-      <h3>Add New</h3>
-    <% end %>
-  </li>
-
   <li class="navBar__entry <%= current_class?(thisweek_path) %>">
     <%=link_to thisweek_path do %>
       <span class="icon">
