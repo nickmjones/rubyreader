@@ -1,5 +1,7 @@
 document.addEventListener 'turbolinks:load', ->
 
+  # TODO add error handling to this
+
   request = new XMLHttpRequest
   target = document.querySelector '.book-title'
   author_field = document.querySelector '.author-field'

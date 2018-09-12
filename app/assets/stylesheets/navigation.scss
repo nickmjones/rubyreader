@@ -7,7 +7,7 @@ $nav-height: 8rem;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background: white;
+  background: #fff;
   z-index: 999;
   width: 110%;
   margin: 0 -1rem;
@@ -59,15 +59,15 @@ $nav-height: 8rem;
       padding-bottom: .4rem;
     }
   }
-
   &__entry {
     flex: 0 1 auto;
+    text-align: center;
     width: 25%;
-    text-align: center; 
-  }
-  &__entry.active {
-    * {
-      color: #1895e1;
+
+    &.active {
+      * {
+        color: $color-blue;
+      }
     }
   }
 }

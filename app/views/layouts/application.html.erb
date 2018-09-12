@@ -5,16 +5,23 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <meta name='viewport' content='viewport-fit=cover, width=device-width, height=device-height, initial-scale=1.0, user-scalable = no'>
+    <meta name='viewport' content='viewport-fit=cover, width=device-width, height=device-height, initial-scale=1.0, user-scalable=no'>
     <%= render 'shared/webcapable' %>
   </head>
 
   <body ontouchstart="">
     <%= render 'shared/navigation' %>
+    <div class="overlay"></div>
+
     <div class="view">
       <div class="content">
         <%= yield %>
       </div>
     </div>
+
+    <div class="new-form">
+      <div class="close">&times;</div>
+    </div>
+
   </body>
 </html>

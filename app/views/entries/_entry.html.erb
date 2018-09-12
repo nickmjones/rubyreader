@@ -5,9 +5,7 @@
     </div>
   <% end %>
   <div class="edit-this">
-    <%=link_to edit_entry_path(entry) do %>
-      <%=fa_icon "wrench" %>
-    <% end %>
+    <%= link_to raw('<i class="fa fa-trash"></i>'), entry, method: :delete, data: {confirm: "Are you sure?"}, remote: true %>
   </div>
   <h1><%= link_to entry.book_title, entry %></h1>
   <div class="stats">

@@ -20,8 +20,8 @@ input[type="submit"].btn {
 
   &--devise {
     background: white;
-    border: 2px solid #777;
-    color: #777;
+    border: 2px solid $color-blue;
+    color: $color-blue;
   }
 
   &--simple {
