@@ -1,0 +1,25 @@
+<%= form_for Entry.new do |f| %>
+
+  <p>
+    <%= f.text_field :book_title, required: true, placeholder: "ex. Charlotte's Web" %>
+    <label><%= f.label :book_title %></label>
+  </p>
+
+  <p>
+    <%= f.text_field :genre, required: true, placeholder: "ex. Historical Fiction" %>
+    <label><%= f.label :genre %></label>
+  </p>
+
+  <p>
+    <%= f.text_field :pages_read, required: true %>
+    <label><%= f.label :pages_read %></label>
+  </p>
+
+  <p>
+    <%= f.number_field :minutes_read, required: true %>
+    <label><%= f.label :minutes_read %></label>
+  </p>
+
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= f.submit "Add Progress", class: "btn" %>
+<% end %>

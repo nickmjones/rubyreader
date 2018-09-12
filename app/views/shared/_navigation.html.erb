@@ -20,7 +20,7 @@
   </li>
 
   <li class="navBar__entry <%= current_class?(new_entry_path) %>">
-    <%=link_to new_entry_path do %>
+    <%=link_to new_entry_path, class: 'new' do %>
       <span class="icon">
         <%= fa_icon "plus-square" %>
       </span>

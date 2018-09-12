@@ -8,7 +8,8 @@ $ ->
     o.toggleClass('in-view')
     f.toggleClass('is-popped')
   
-  $('.test').click ->
+  $('.new').click (e)->
+    e.preventDefault()
     handleForm()
   $('.close').click ->
     handleForm()
