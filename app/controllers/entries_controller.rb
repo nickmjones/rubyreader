@@ -6,8 +6,8 @@ class EntriesController < ApplicationController
     @total_minutes = Entry.select(:minutes_read).map(&:minutes_read).inject(0, :+)
     @total_pages = Entry.select(:pages_read).map(&:pages_read).inject(0, :+)
     @total_books = Entry.select(:pages_read).map(&:pages_read).uniq
-    @today_minutes = Entry.today.select(:minutes_read).map(&:minutes_read).inject(0, :+)
-    @entries_today = Entry.today.order('created_at DESC')
+    @today_minutes = Entry.today.by_user(current_user).select(:minutes_read).map(&:minutes_read).inject(0, :+)
+    @entries_today = Entry.today.by_user(current_user).order('created_at DESC')
   end
 
   def edit
@@ -49,14 +49,14 @@ class EntriesController < ApplicationController
   # /archive
   def archive
     @this_user = current_user.id
-    @entries = Entry.mine.all.order('created_at DESC')
+    @entries = Entry.by_user(current_user).all.order('created_at DESC')
   end
 
   # /thisweek
   def thisweek
     @this_user = current_user.id
     @week_minutes = Entry.thisweek.select(:minutes_read).map(&:minutes_read).inject(0, :+)
-    @entries = Entry.thisweek.all.order('created_at ASC')
+    @entries = Entry.by_user(current_user).thisweek.all.order('created_at ASC')
   end
 
   private
